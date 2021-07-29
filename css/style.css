@@ -6,6 +6,44 @@ body {
   font-family: "Poppins", sans-serif !important;
 }
 
+.main__pri {
+  background-color: #c74741;
+}
+
+.main__dark {
+  background-color: #921D22;
+}
+
+.main__light {
+  background-color: #FED2CE;
+}
+
+.text__pri {
+  color: #c74741;
+}
+
+.text__dark {
+  color: #921D22;
+}
+
+.text__light {
+  color: #FED2CE;
+}
+
+.para {
+  font-size: 14px;
+}
+@media only screen and (min-width: 768px) {
+  .para {
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: xl) {
+  .para {
+    font-size: 18px;
+  }
+}
+
 /* navbar  */
 .navbar .contact,
 .navbar .contact-btn {

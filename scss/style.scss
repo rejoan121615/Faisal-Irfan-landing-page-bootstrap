@@ -18,6 +18,38 @@ $xxl: 1400px;
 body {
     font-family: "Poppins", sans-serif !important;
 }
+// default color 
+$primary: #c74741;
+$primary__dark: #921D22;
+$primary__light: #FED2CE;
+// default style 
+.main__pri {
+    background-color: $primary;
+}
+.main__dark {
+    background-color: $primary__dark;
+}
+.main__light {
+    background-color: $primary__light;
+}
+.text__pri {
+    color: $primary;
+}
+.text__dark {
+    color: $primary__dark;
+}
+.text__light {
+    color: $primary__light;
+}
+.para {
+    font-size: 14px;
+    @include resp($md) {
+        font-size: 16px;
+    }
+    @include resp (xl) {
+        font-size: 18px;
+    }
+}
 /* navbar  */
 .navbar .contact,
 .navbar .contact-btn {
