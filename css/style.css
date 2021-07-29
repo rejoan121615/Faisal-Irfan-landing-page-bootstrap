@@ -30,6 +30,14 @@ body {
   color: #fed2ce !important;
 }
 
+.bg__sil {
+  background-color: #D3D3D3 !important;
+}
+
+.text__sil {
+  color: #D3D3D3 !important;
+}
+
 .para {
   font-size: 14px;
 }
@@ -182,6 +190,10 @@ h3,
   #card-list .texts {
     width: initial !important;
   }
+}
+
+#table .border-md-bottom {
+  border-bottom: 1px solid #D3D3D3 !important;
 }
 
 /*# sourceMappingURL=style.css.map */

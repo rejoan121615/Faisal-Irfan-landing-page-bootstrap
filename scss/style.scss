@@ -23,6 +23,7 @@ body {
 $primary: #c74741 !important;
 $primary__dark: #921d22 !important;
 $primary__light: #fed2ce !important;
+$sliver: #D3D3D3;
 // default style
 .main__pri {
     background-color: $primary;
@@ -41,6 +42,12 @@ $primary__light: #fed2ce !important;
 }
 .text__light {
     color: $primary__light;
+}
+.bg__sil {
+    background-color: $sliver!important;
+}
+.text__sil {
+    color: $sliver!important;
 }
 // para
 .para {
@@ -165,3 +172,14 @@ h3,
         }
     }
 }
+
+// table style 
+#table {
+    .table__nav {
+
+    }
+    .border-md-bottom {
+        border-bottom: 1px solid $sliver!important;
+    }
+}
+
