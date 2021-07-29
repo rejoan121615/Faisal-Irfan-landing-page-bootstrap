@@ -8,8 +8,8 @@ $lg: 992px;
 $xl: 1200px;
 $xxl: 1400px;
 
-// mixing 
-@mixin resp ($width) {
+// mixing
+@mixin resp($width) {
     @media only screen and (min-width: $width) {
         @content;
     }
@@ -19,11 +19,11 @@ body {
     font-family: "Poppins", sans-serif !important;
     // overflow-x: hidden;
 }
-// default color 
-$primary: #c74741!important;
-$primary__dark: #921D22!important;
-$primary__light: #FED2CE!important;
-// default style 
+// default color
+$primary: #c74741 !important;
+$primary__dark: #921d22 !important;
+$primary__light: #fed2ce !important;
+// default style
 .main__pri {
     background-color: $primary;
 }
@@ -42,18 +42,35 @@ $primary__light: #FED2CE!important;
 .text__light {
     color: $primary__light;
 }
+// para
 .para {
     font-size: 14px;
     @include resp($md) {
         font-size: 16px;
     }
-    @include resp (xl) {
+    @include resp(xl) {
         font-size: 18px;
     }
 }
-// custom btn 
+
+// heading
+h1,
+.h1 {
+    font-size: 40px !important;
+    line-height: 100% !important;
+    letter-spacing: 0% !important;
+    @include resp($md) {
+        font-size: 46px !important;
+        letter-spacing: 1% !important;
+    }
+    @include resp($xl) {
+        font-size: 58px !important;
+        letter-spacing: 0% !important;
+    }
+}
+// custom btn
 .cus__btn {
-    color: white!important;
+    color: white !important;
     border: 0;
     text-align: center;
     font-weight: bold;
@@ -68,30 +85,28 @@ $primary__light: #FED2CE!important;
 .navbar .contact-btn {
     font-weight: 600;
     font-size: 13px;
-    @include resp ($sm) {
+    @include resp($sm) {
         font-size: 15px;
     }
-    @include resp ($xl) {
+    @include resp($xl) {
         font-size: 16.5px;
     }
 }
 
-
-// main section 
+// main section
 #main {
     padding-top: 65px;
     .container {
-        @include resp($lg) {
+        @include resp($md) {
             height: 550px;
             position: relative;
             z-index: 200;
         }
     }
     .img__container {
-        @include resp($lg) {
+        @include resp($md) {
             position: relative;
             z-index: 100;
         }
     }
 }
-
