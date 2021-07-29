@@ -7,27 +7,27 @@ body {
 }
 
 .main__pri {
-  background-color: #c74741;
+  background-color: #c74741 !important;
 }
 
 .main__dark {
-  background-color: #921D22;
+  background-color: #921D22 !important;
 }
 
 .main__light {
-  background-color: #FED2CE;
+  background-color: #FED2CE !important;
 }
 
 .text__pri {
-  color: #c74741;
+  color: #c74741 !important;
 }
 
 .text__dark {
-  color: #921D22;
+  color: #921D22 !important;
 }
 
 .text__light {
-  color: #FED2CE;
+  color: #FED2CE !important;
 }
 
 .para {
@@ -42,6 +42,18 @@ body {
   .para {
     font-size: 18px;
   }
+}
+
+.cus__btn {
+  color: white !important;
+  border: 0;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 12px 28px;
+  border-radius: 0px;
 }
 
 /* navbar  */
@@ -61,6 +73,17 @@ body {
 .navbar .contact-btn {
     font-size: 16.5px;
   }
+}
+
+#main {
+  padding-top: 65px;
+}
+#main .container-fluid {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+#main #main__form {
+  padding: 40px 25px 40px 25px;
 }
 
 /*# sourceMappingURL=style.css.map */

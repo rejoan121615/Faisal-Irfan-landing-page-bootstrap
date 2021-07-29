@@ -17,11 +17,12 @@ $xxl: 1400px;
 /* default fonts  */
 body {
     font-family: "Poppins", sans-serif !important;
+    // overflow-x: hidden;
 }
 // default color 
-$primary: #c74741;
-$primary__dark: #921D22;
-$primary__light: #FED2CE;
+$primary: #c74741!important;
+$primary__dark: #921D22!important;
+$primary__light: #FED2CE!important;
 // default style 
 .main__pri {
     background-color: $primary;
@@ -50,6 +51,18 @@ $primary__light: #FED2CE;
         font-size: 18px;
     }
 }
+// custom btn 
+.cus__btn {
+    color: white!important;
+    border: 0;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 12px 28px;
+    border-radius: 0px;
+}
 /* navbar  */
 .navbar .contact,
 .navbar .contact-btn {
@@ -62,3 +75,19 @@ $primary__light: #FED2CE;
         font-size: 16.5px;
     }
 }
+
+
+// main section 
+#main {
+    padding-top: 65px;
+
+    // form container 
+    .container-fluid {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #main__form {
+        padding: 40px 25px 40px 25px;
+    }
+}
+
