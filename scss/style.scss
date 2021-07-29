@@ -23,7 +23,7 @@ body {
 $primary: #c74741 !important;
 $primary__dark: #921d22 !important;
 $primary__light: #fed2ce !important;
-$sliver: #D3D3D3;
+$sliver: #d3d3d3;
 // default style
 .main__pri {
     background-color: $primary;
@@ -44,48 +44,68 @@ $sliver: #D3D3D3;
     color: $primary__light;
 }
 .bg__sil {
-    background-color: $sliver!important;
+    background-color: $sliver !important;
 }
 .text__sil {
-    color: $sliver!important;
+    color: $sliver !important;
 }
+
 // para
 .para {
-    font-size: 14px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.01em;
+    color: #3d3d3d;
+    mix-blend-mode: normal;
     @include resp($md) {
         font-size: 16px;
     }
     @include resp(xl) {
-        font-size: 18px;
+        font-size: 16px;
+        line-height: 170%;
+        letter-spacing: 0.01em;
     }
 }
 
+.sm-para {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0.01em;
+}
+.most-sm-para {
+    font-size: 10px !important;
+    line-height: 140% !important;
+    letter-spacing: 0.01em !important;
+}
 // heading
 h1,
 .h1 {
     font-size: 40px !important;
     line-height: 100% !important;
-    letter-spacing: 0% !important;
     @include resp($md) {
         font-size: 46px !important;
-        letter-spacing: 1% !important;
     }
     @include resp($xl) {
         font-size: 58px !important;
-        letter-spacing: 0% !important;
     }
 }
 h2,
 .h2 {
-    font-size: 32px !important;
-    line-height: 100% !important;
-    letter-spacing: 0px;
-    margin-bottom: 0px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: -0.01em;
     @include resp($md) {
-        font-size: 36px !important;
+        font-size: 36px;
     }
     @include resp($xl) {
-        font-size: 46px !important;
+        font-size: 46px;
     }
 }
 h3,
@@ -104,26 +124,44 @@ h3,
 
 // custom btn
 .cus__btn {
-    color: white !important;
-    border: 0;
+    font-weight: 700;
+    font-size: 10px;
     text-align: center;
-    font-weight: bold;
+    letter-spacing: 8%;
+    padding: 10px 23px;
     text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 1px;
-    padding: 12px 28px;
-    border-radius: 0px;
+    border-radius: 0px !important;
+    text-decoration: none;
+    border: 0px solid transparent;
+}
+// container
+.container {
+    // @media screen and (max-width: $sm) {
+    //     padding-left: 32px !important;
+    //     padding-right: 32px !important;
+    // }
 }
 /* navbar  */
+.navbar a svg {
+    width: 72px;
+    height: 22px;
+    @include resp($md) {
+        width: 82px;
+        height: 24px;
+    }
+    @include resp ($xl) {
+        width: 105px;
+        height: 30px;
+    }
+}
 .navbar .contact,
 .navbar .contact-btn {
-    font-weight: 600;
-    font-size: 13px;
-    @include resp($sm) {
-        font-size: 15px;
-    }
+    @extend .cus__btn;
+}
+
+.navbar .contact {
     @include resp($xl) {
-        font-size: 16.5px;
+        margin-right: 50px !important;
     }
 }
 
@@ -135,6 +173,44 @@ h3,
             position: relative;
             z-index: 200;
         }
+        .text__wrap {
+            margin-bottom: 50px;
+        }
+        .heading {
+            margin-bottom: 35px;
+            @include resp($md) {
+                margin-bottom: 30px;
+            }
+            @include resp($xl) {
+                // margin-bottom: ;
+            }
+            h1 {
+                max-width: 285px;
+                letter-spacing: -1.5%;
+                @include resp($md) {
+                    max-width: 330px;
+                    letter-spacing: -0.015em;
+                }
+                @include resp($xl) {
+                    max-width: 455px;
+                }
+            }
+        }
+
+        // para
+        .mb {
+            margin-bottom: 35px;
+            width: 90%;
+            font-weight: 400;
+            @include resp($md) {
+                margin-bottom: 45px;
+                width: 100%;
+            }
+            @include resp ($xl) {
+                width: 455px;
+                margin-bottom: 50px;
+            }
+        }
     }
     .img__container {
         @include resp($md) {
@@ -142,9 +218,91 @@ h3,
             z-index: 100;
         }
     }
+
+    // form section
+    .container-fluid {
+        padding: 0px !important;
+    }
+
+    // image section
+    .img__container {
+        overflow-x: hidden;
+        img {
+            transform: translateX(32px);
+            @include resp($md) {
+                transform: initial;
+            }
+        }
+    }
+    // button wrapper
+    .btn__wrapper {
+        margin-bottom: 50px;
+        @include resp($md) {
+            margin-bottom: 70px;
+        }
+        @include resp ($xl) {
+            margin-bottom: 0px;
+        }
+    }
+    // main text
+    .main__texts {
+        @include resp($md) {
+            width: 50% !important;
+        }
+        @include resp ($xl) {
+            margin-bottom: 100px;
+        }
+    }
+}
+
+// form container
+.form-container {
+    @include resp($md) {
+        position: absolute;
+        right: 0px;
+        top: 150px;
+        z-index: 500;
+        width: 45% !important;
+    }
+    @include resp ($xl) {
+        // @extend .container;
+    }
+    .form-check {
+        margin-top: 25px;
+    }
+}
+
+// form section
+#main__form {
+    padding: 50px 32px;
+    .sm-para {
+        max-width: 355px;
+        margin-bottom: 50px;
+    }
+
+    label {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 120%;
+    }
+    input {
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+        border: 1px solid #ffffff;
+        outline: none;
+        &::selection {
+            outline: none;
+        }
+    }
+    .btn__wrapper {
+        margin-top: 35px;
+    }
 }
 
 .container__space {
+    padding-top: 108px !important;
+    padding-bottom: 108px !important;
     @include resp($md) {
         padding-top: 65px !important;
         padding-bottom: 65px !important;
@@ -161,7 +319,7 @@ h3,
         width: 30%;
         @include resp($md) {
             width: initial !important;
-            text-align: left!important;
+            text-align: left !important;
             margin-left: 15px;
         }
     }
@@ -173,13 +331,11 @@ h3,
     }
 }
 
-// table style 
+// table style
 #table {
     .table__nav {
-
     }
     .border-md-bottom {
-        border-bottom: 1px solid $sliver!important;
+        border-bottom: 1px solid $sliver !important;
     }
 }
-
