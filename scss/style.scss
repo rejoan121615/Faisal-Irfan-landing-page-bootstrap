@@ -76,6 +76,10 @@ $sliver: #d3d3d3;
     font-size: 14px;
     line-height: 150%;
     letter-spacing: 0.01em;
+    @include resp($xl) {
+        line-height: 170%;
+        letter-spacing: 0.02em;
+    }
 }
 .most-sm-para {
     font-size: 10px !important;
@@ -133,6 +137,11 @@ h3,
     border-radius: 0px !important;
     text-decoration: none;
     border: 0px solid transparent;
+    @include resp($xl) {
+        line-height: 100%;
+        letter-spacing: 0.08em;
+        padding: 14px 32px;
+    }
 }
 // container
 .container {
@@ -149,7 +158,7 @@ h3,
         width: 82px;
         height: 24px;
     }
-    @include resp ($xl) {
+    @include resp($xl) {
         width: 105px;
         height: 30px;
     }
@@ -206,7 +215,7 @@ h3,
                 margin-bottom: 45px;
                 width: 100%;
             }
-            @include resp ($xl) {
+            @include resp($xl) {
                 width: 455px;
                 margin-bottom: 50px;
             }
@@ -236,20 +245,18 @@ h3,
     }
     // button wrapper
     .btn__wrapper {
-        margin-bottom: 50px;
-        @include resp($md) {
-            margin-bottom: 70px;
-        }
-        @include resp ($xl) {
-            margin-bottom: 0px;
+        @include resp($xl) {
+            margin-top: 50px;
         }
     }
     // main text
     .main__texts {
+        margin-bottom: 50px;
         @include resp($md) {
             width: 50% !important;
+            margin-bottom: 75px;
         }
-        @include resp ($xl) {
+        @include resp($xl) {
             margin-bottom: 100px;
         }
     }
@@ -257,27 +264,63 @@ h3,
 
 // form container
 .form-container {
+    transition: width 1s;
     @include resp($md) {
         position: absolute;
         right: 0px;
         top: 150px;
         z-index: 500;
         width: 45% !important;
+        max-width: 430px;
     }
-    @include resp ($xl) {
-        // @extend .container;
+    @include resp($xl) {
+        width: 100% !important;
+        max-width: 100%;
     }
     .form-check {
         margin-top: 25px;
     }
 }
+.form__wrap {
+    @include resp($xl) {
+        max-width: 1140px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @include resp($xxl) {
+        max-width: 1320px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 
 // form section
 #main__form {
+    transition: all 1s;
+    @include resp($xl) {
+        width: 45%;
+        margin-left: auto;
+        padding: 72px 95px !important;
+    }
     padding: 50px 32px;
     .sm-para {
         max-width: 355px;
         margin-bottom: 50px;
+        @include resp($md) {
+            line-height: 150%;
+            letter-spacing: 0.04em;
+        }
+        @include resp($xxl) {
+            line-height: 170%;
+
+            letter-spacing: 0.02em;
+        }
+    }
+    .form-floating {
+        margin-bottom: 25px;
+        @include resp($xl) {
+            margin-bottom: 35px;
+        }
     }
 
     label {
@@ -287,12 +330,11 @@ h3,
         line-height: 120%;
     }
     input {
-        padding-top: 10px !important;
-        padding-bottom: 10px !important;
+        padding-top: 0px !important;
+        padding-bottom: 5px !important;
         border: 1px solid #ffffff;
-        outline: none;
-        &::selection {
-            outline: none;
+        @include resp ($xl) {
+            padding-bottom: 10px!important;
         }
     }
     .btn__wrapper {
