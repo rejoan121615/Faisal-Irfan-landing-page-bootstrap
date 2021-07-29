@@ -85,6 +85,26 @@ h2,
   }
 }
 
+h3,
+.h3 {
+  font-size: 18px !important;
+  line-height: 120% !important;
+  letter-spacing: 1% !important;
+}
+@media only screen and (min-width: 768px) {
+  h3,
+.h3 {
+    line-height: 110% !important;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  h3,
+.h3 {
+    font-size: 22px !important;
+    line-height: 120% !important;
+  }
+}
+
 .cus__btn {
   color: white !important;
   border: 0;
@@ -133,15 +153,34 @@ h2,
 }
 
 @media only screen and (min-width: 768px) {
-  .container__margin {
+  .container__space {
     padding-top: 65px !important;
     padding-bottom: 65px !important;
   }
 }
 @media only screen and (min-width: 992px) {
-  .container__margin {
+  .container__space {
     padding-top: 90px !important;
     padding-bottom: 90px !important;
+  }
+}
+
+#card-list .icon {
+  width: 30%;
+}
+@media only screen and (min-width: 768px) {
+  #card-list .icon {
+    width: initial !important;
+    text-align: left !important;
+    margin-left: 15px;
+  }
+}
+#card-list .texts {
+  width: 65%;
+}
+@media only screen and (min-width: 768px) {
+  #card-list .texts {
+    width: initial !important;
   }
 }
 

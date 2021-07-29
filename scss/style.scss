@@ -81,6 +81,19 @@ h2,
         font-size: 46px !important;
     }
 }
+h3,
+.h3 {
+    font-size: 18px !important;
+    line-height: 120% !important;
+    letter-spacing: 1% !important;
+    @include resp($md) {
+        line-height: 110% !important;
+    }
+    @include resp($xl) {
+        font-size: 22px !important;
+        line-height: 120% !important;
+    }
+}
 
 // custom btn
 .cus__btn {
@@ -124,14 +137,31 @@ h2,
     }
 }
 
-
-.container__margin {
-    @include resp ($md) {
-        padding-top: 65px!important;
-        padding-bottom: 65px!important;
+.container__space {
+    @include resp($md) {
+        padding-top: 65px !important;
+        padding-bottom: 65px !important;
     }
-    @include resp ($lg) {
-        padding-top: 90px!important;
-        padding-bottom: 90px!important;
+    @include resp($lg) {
+        padding-top: 90px !important;
+        padding-bottom: 90px !important;
+    }
+}
+
+// card list
+#card-list {
+    .icon {
+        width: 30%;
+        @include resp($md) {
+            width: initial !important;
+            text-align: left!important;
+            margin-left: 15px;
+        }
+    }
+    .texts {
+        width: 65%;
+        @include resp($md) {
+            width: initial !important;
+        }
     }
 }
