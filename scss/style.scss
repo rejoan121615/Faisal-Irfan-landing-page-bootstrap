@@ -68,6 +68,20 @@ h1,
         letter-spacing: 0% !important;
     }
 }
+h2,
+.h2 {
+    font-size: 32px !important;
+    line-height: 100% !important;
+    letter-spacing: 0px;
+    margin-bottom: 0px;
+    @include resp($md) {
+        font-size: 36px !important;
+    }
+    @include resp($xl) {
+        font-size: 46px !important;
+    }
+}
+
 // custom btn
 .cus__btn {
     color: white !important;
@@ -98,7 +112,6 @@ h1,
     padding-top: 65px;
     .container {
         @include resp($md) {
-            height: 550px;
             position: relative;
             z-index: 200;
         }
@@ -108,5 +121,17 @@ h1,
             position: relative;
             z-index: 100;
         }
+    }
+}
+
+
+.container__margin {
+    @include resp ($md) {
+        padding-top: 65px!important;
+        padding-bottom: 65px!important;
+    }
+    @include resp ($lg) {
+        padding-top: 90px!important;
+        padding-bottom: 90px!important;
     }
 }
