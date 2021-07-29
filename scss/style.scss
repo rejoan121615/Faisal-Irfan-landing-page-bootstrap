@@ -80,14 +80,18 @@ $primary__light: #FED2CE!important;
 // main section 
 #main {
     padding-top: 65px;
-
-    // form container 
-    .container-fluid {
-        padding-left: 0px;
-        padding-right: 0px;
+    .container {
+        @include resp($lg) {
+            height: 550px;
+            position: relative;
+            z-index: 200;
+        }
     }
-    #main__form {
-        padding: 40px 25px 40px 25px;
+    .img__container {
+        @include resp($lg) {
+            position: relative;
+            z-index: 100;
+        }
     }
 }
 

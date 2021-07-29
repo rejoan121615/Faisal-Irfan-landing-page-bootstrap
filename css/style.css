@@ -78,12 +78,18 @@ body {
 #main {
   padding-top: 65px;
 }
-#main .container-fluid {
-  padding-left: 0px;
-  padding-right: 0px;
+@media only screen and (min-width: 992px) {
+  #main .container {
+    height: 550px;
+    position: relative;
+    z-index: 200;
+  }
 }
-#main #main__form {
-  padding: 40px 25px 40px 25px;
+@media only screen and (min-width: 992px) {
+  #main .img__container {
+    position: relative;
+    z-index: 100;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
